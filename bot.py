@@ -108,3 +108,6 @@ class Bot:
                         best_move = move
 
         return best_score, best_move
+
+    def get_move(self, depth:int, board:list) -> tuple[int, int]:
+        return self.minimax(depth=depth, is_max=True, test_board=board)[1]
